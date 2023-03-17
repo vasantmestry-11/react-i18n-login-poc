@@ -30,13 +30,13 @@ function App() {
   useEffect(() => {
     document.title = t("app_title");
   }, [currentLanguage, t]);
-  
+
   return (
     <>
       <div className="d-flex justify-content-end">
         <div className="dropdown">
           <button
-            className="btn btn-link dropdown-toggle"
+            className="btn btn-link text-white dropdown-toggle"
             type="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"

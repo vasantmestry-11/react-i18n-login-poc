@@ -1,4 +1,11 @@
 import React, { Suspense } from "react";
+import {
+  BrowserRouter,
+  HashRouter,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import ReactDOM from "react-dom/client";
 
 import LanguageDetector from "i18next-browser-languagedetector";
@@ -12,6 +19,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import App from "./App";
 import "./index.css";
+import Dashboard from "./components/Dashboard/Dashboard";
 
 i18n
   .use(initReactI18next) // initializes react-i18next
@@ -44,8 +52,14 @@ const LoadingMarkup = () => (
 
 root.render(
   <React.StrictMode>
-    <Suspense fallback={<LoadingMarkup />}>
-      <App />
-    </Suspense>
+    <HashRouter>
+      <Suspense fallback={<LoadingMarkup />}>
+        <Routes>
+          <Route exact path="/" element={<App />} />
+          <Route exact path="/dashboard" element={<Dashboard />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </Suspense>
+    </HashRouter>
   </React.StrictMode>
 );

@@ -1,8 +1,10 @@
 import { useTranslation } from "react-i18next";
+import { Link, Navigate, NavLink, useNavigate } from "react-router-dom";
 import "./Card.css";
 
 const Card = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   return (
     <div className="login-card card d-flex flex-column">
       <div className="card-body">
@@ -21,7 +23,13 @@ const Card = () => {
             placeholder={t("password")}
           />
         </div>
-        <button className="btn btn-outline-success w-100 btn-sm">
+        <button
+          className="btn btn-outline-success w-100 btn-sm"
+          onClick={(e) => {
+            e.preventDefault();
+            navigate("/dashboard");
+          }}
+        >
           {t("login_button_text")}
         </button>
       </div>
