@@ -1,11 +1,5 @@
 import React, { Suspense } from "react";
-import {
-  BrowserRouter,
-  HashRouter,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 
 import LanguageDetector from "i18next-browser-languagedetector";

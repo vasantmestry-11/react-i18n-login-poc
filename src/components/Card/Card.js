@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Link, Navigate, NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./Card.css";
 
 const Card = () => {
