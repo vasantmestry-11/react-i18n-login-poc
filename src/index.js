@@ -14,6 +14,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import App from "./App";
 import "./index.css";
 import Dashboard from "./components/Dashboard/Dashboard";
+import Translation from "./components/Translation/Translation";
 
 i18n
   .use(initReactI18next) // initializes react-i18next
@@ -48,6 +49,7 @@ root.render(
   <React.StrictMode>
     <HashRouter>
       <Suspense fallback={<LoadingMarkup />}>
+        <Translation />
         <Routes>
           <Route exact path="/" element={<App />} />
           <Route exact path="/dashboard" element={<Dashboard />} />
