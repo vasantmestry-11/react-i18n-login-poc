@@ -33,17 +33,18 @@ i18n
       loadPath: "/assets/locales/{{lng}}/translation.json", //path where resources get loaded from
     },
   });
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const loadingMarkup = () => (
-  <div className="py-4 text-center">
+const LoadingMarkup = () => (
+  <div className="py-4 text-center text-white">
     <h1>Loading...</h1>
   </div>
 );
 
 root.render(
   <React.StrictMode>
-    <Suspense fallback={loadingMarkup}>
+    <Suspense fallback={<LoadingMarkup />}>
       <App />
     </Suspense>
   </React.StrictMode>
