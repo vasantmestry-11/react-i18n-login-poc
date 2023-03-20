@@ -5,5 +5,8 @@
   "app_title":"Application de connexion",
   "login_button_text":"Connexion",
   "password":"mot de passe",
-  "username":"nom d'utilisateur"
+  "username":"nom d'utilisateur",
+  "id":"Identifiant",
+  "name":"nom",
+  "location":"l' emplacement"
 }

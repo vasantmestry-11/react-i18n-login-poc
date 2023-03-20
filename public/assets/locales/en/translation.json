@@ -5,5 +5,8 @@
   "app_title":"Login App",
   "login_button_text":"Login",
   "password":"password",
-  "username":"username"
+  "username":"username",
+  "id":"Id",
+  "name":"Name",
+  "location":"Location"
 }
